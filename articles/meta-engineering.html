@@ -188,13 +188,13 @@
 
       <p>AI agent tooling is the next layer. You stop implementing features. You build the feedback loops, validation harnesses, and knowledge bases that agents consume.</p>
 
-      <p>I see three pillars to this kind of work.</p>
+      <p>In practice, here's what that looks like for me.</p>
 
-      <p>The first is <strong>feedback loops</strong>. An agent can't fix what it can't see. My rendering agent had no way to compare its output against the original design. It was coding blind. The moment I gave it "eyes" (a visual diff tool that outputs a score and a heatmap), it could self-correct. Feedback loops are the eyes, ears, and nervous system of an autonomous agent.</p>
+      <p>I spend a lot of time on <strong>feedback loops</strong>. An agent can't fix what it can't see. My rendering agent had no way to compare its output against the original design. It was coding blind. The moment I gave it "eyes" (a visual diff tool that outputs a score and a heatmap), it could self-correct. Feedback loops are the eyes, ears, and nervous system of an autonomous agent.</p>
 
-      <p>The second is <strong>knowledge codification</strong>. Every senior developer carries around a mental catalog of "things that always go wrong." Text wraps incorrectly when the frame type is ambiguous. Layer stacking order gets inverted. Opacity values get misinterpreted across different scales. This knowledge lives in people's heads. Meta-engineering means writing it down: not as documentation, but as machine-readable detection rules paired with fix suggestions. I built a catalog of known rendering pitfalls. Each one has a detection function, an explanation, and an exact code fix. The agent doesn't need to "learn" these patterns. It just queries the catalog.</p>
+      <p>I also spend time on <strong>knowledge codification</strong>. Every senior developer carries around a mental catalog of "things that always go wrong." Text wraps incorrectly when the frame type is ambiguous. Layer stacking order gets inverted. Opacity values get misinterpreted across different scales. This knowledge lives in people's heads. I've been trying to write it down: not as documentation, but as machine-readable detection rules paired with fix suggestions. I built a catalog of known rendering pitfalls. Each one has a detection function, an explanation, and an exact code fix. The agent doesn't need to "learn" these patterns. It just queries the catalog.</p>
 
-      <p>The third is <strong>guardrails</strong>. Before the agent writes a single line, you define what "correct" looks like. Type systems. Tolerance profiles. Scoring thresholds. I defined tiers ranging from pixel-perfect to work-in-progress, each specifying acceptable similarity scores, maximum structural failures, and per-element tolerances. Text elements get looser thresholds than images because browser font rendering will never match a design tool's output exactly. These definitions exist before any code is written. They are the specification, not in a document, but in code.</p>
+      <p>And then there are <strong>guardrails</strong>. Before the agent writes a single line, you define what "correct" looks like. Type systems. Tolerance profiles. Scoring thresholds. I defined tiers ranging from pixel-perfect to work-in-progress, each specifying acceptable similarity scores, maximum structural failures, and per-element tolerances. Text elements get looser thresholds than images because browser font rendering will never match a design tool's output exactly. These definitions exist before any code is written. They are the specification, not in a document, but in code.</p>
 
       <hr />
 
@@ -260,15 +260,13 @@
 
       <p>That sentence would have horrified me three years ago. Writing code was the job. It was the craft. It was the thing I was good at, the thing I could point to and say: I made this. When the highest-leverage move is to not write code, to instead design the system that ensures code correctness, something shifts in your professional identity. You're still an engineer. But the engineering looks different. It looks like defining. Like evaluating. Like managing.</p>
 
-      <p>This has implications beyond individual identity. If the most valuable engineering skill is no longer implementation but system design for autonomous agents, then how we hire engineers needs to change. The interview question shifts from "can you write a binary search?" to "can you design an evaluation harness that catches when a binary search is wrong?" How we evaluate performance changes too. Lines of code, PRs merged, tickets closed; these metrics were already imperfect. In a world where agents write the code, they become meaningless. What matters is: did the systems you built make the agents more correct, more autonomous, more reliable?</p>
+      <p>Compilers were a new layer on top of machine code. CI/CD was a new layer on top of manual testing. Infrastructure as code was a new layer on top of hand-deploying servers. Every time, the developer who moved up a level of abstraction felt like they were losing something. And every time, they were gaining leverage they couldn't have imagined from the layer below.</p>
 
-      <p>The role I'm describing (designing feedback loops, codifying quality, building the tools that build the product) doesn't have a job title yet. "Meta-engineer" is my attempt. You might call it something else.</p>
+      <p>I think we're at another one of those transitions. The question isn't whether developers should keep writing code. Of course they should, when that's the right level of abstraction for the problem. The question is whether we should also be building a new layer on top of coding: the layer of feedback loops, validation systems, knowledge catalogs, and tolerance profiles that lets autonomous agents do the implementation while we focus on defining what "correct" means.</p>
 
-      <p>But here's the question I keep coming back to: if the highest-leverage thing a developer can do is no longer writing code, but designing the systems that make code correct, then what exactly separates us from the best engineering managers we've ever worked with?</p>
+      <p>I don't know what that layer looks like fully formed. I'm still figuring it out, one evaluation tool at a time. But I know the pattern feels familiar. Every abstraction layer in computing history looked the same way: someone stopped doing the work directly and started building the system that does the work correctly.</p>
 
-      <p>Maybe nothing.</p>
-
-      <p>Maybe that's the point.</p>
+      <p>Maybe that's all this is. The next layer.</p>
     </article>
   </main>
 
