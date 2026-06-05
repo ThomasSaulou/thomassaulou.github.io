@@ -7,8 +7,8 @@
   <meta name="google-site-verification" content="F1yZYRpmSvjpjJo8zr6XGLN0l1g95KaCxZ3jnnI6xVU" />
 
   <!-- Primary SEO -->
-  <title>Meta-Engineering: Why AI Agents Turned Me Into a Manager — Thomas Saulou</title>
-  <meta name="description" content="When an AI agent fails ten times in a row, the problem isn't the agent — it's the feedback loop. An essay on meta-engineering: building the systems that let autonomous agents ship correct code." />
+  <title>Meta-Engineering: Why AI Agents Turned Me Into a Manager | Thomas Saulou</title>
+  <meta name="description" content="When an AI agent fails ten times in a row, the problem isn't the agent; it's the feedback loop. An essay on meta-engineering: building the systems that let autonomous agents ship correct code." />
   <meta name="author" content="Thomas Saulou" />
   <meta name="keywords" content="meta-engineering, AI agents, agentic engineering, eval-driven development, autonomous agents, feedback loops, LLM tooling, software engineering management" />
   <link rel="canonical" href="https://thomassaulou.github.io/articles/meta-engineering.html" />
@@ -20,7 +20,7 @@
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="Thomas Saulou" />
   <meta property="og:title" content="Meta-Engineering: Why AI Agents Turned Me Into a Manager" />
-  <meta property="og:description" content="When an AI agent fails ten times, the problem isn't the agent — it's the feedback loop. An essay on building the systems that let autonomous agents ship correct code." />
+  <meta property="og:description" content="When an AI agent fails ten times, the problem isn't the agent; it's the feedback loop. An essay on building the systems that let autonomous agents ship correct code." />
   <meta property="og:url" content="https://thomassaulou.github.io/articles/meta-engineering.html" />
   <meta property="og:image" content="https://thomassaulou.github.io/og-image.svg" />
   <meta property="og:image:width" content="1200" />
@@ -36,12 +36,12 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Meta-Engineering: Why AI Agents Turned Me Into a Manager" />
-  <meta name="twitter:description" content="When an AI agent fails ten times, the problem isn't the agent — it's the feedback loop." />
+  <meta name="twitter:description" content="When an AI agent fails ten times, the problem isn't the agent; it's the feedback loop." />
   <meta name="twitter:image" content="https://thomassaulou.github.io/og-image.svg" />
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
-  <link rel="alternate" type="application/rss+xml" title="Thomas Saulou — RSS" href="/feed.xml" />
+  <link rel="alternate" type="application/rss+xml" title="Thomas Saulou | RSS" href="/feed.xml" />
 
   <link rel="stylesheet" href="../styles.css" />
 
@@ -55,7 +55,7 @@
         "@id": "https://thomassaulou.github.io/articles/meta-engineering.html#article",
         "headline": "Meta-Engineering: Why AI Agents Turned Me Into a Manager",
         "alternativeHeadline": "Why building feedback loops for AI agents is the new high-leverage engineering",
-        "description": "When an AI agent fails ten times, the problem isn't the agent — it's the feedback loop. An essay on building the systems that let autonomous agents ship correct code.",
+        "description": "When an AI agent fails ten times, the problem isn't the agent; it's the feedback loop. An essay on building the systems that let autonomous agents ship correct code.",
         "url": "https://thomassaulou.github.io/articles/meta-engineering.html",
         "datePublished": "2026-06-05",
         "dateModified": "2026-06-05",
@@ -101,7 +101,7 @@
 <body>
   <header class="site-header">
     <div class="site-header__inner">
-      <a class="brand" href="/" aria-label="Thomas Saulou — Home">Thomas<span>.</span></a>
+      <a class="brand" href="/" aria-label="Thomas Saulou, Home">Thomas<span>.</span></a>
       <nav class="site-nav" aria-label="Main navigation">
         <a href="/">Home</a>
         <a href="/about.html">About</a>
@@ -125,15 +125,15 @@
     <article class="article__body">
       <p class="lead">I asked an AI agent to turn a layered design file into a working web page.</p>
 
-      <p>It wrote 400 lines of React in 30 seconds. Clean components, proper TypeScript, reasonable structure. I was impressed for about two seconds — until I opened the browser. The text didn't wrap. A headline that should have been two lines bled off the right edge of its container in a single, infinite line. The layers were stacked backwards: the background image was on top, covering everything else. And the entire composition was invisible, because every layer had its opacity set to zero.</p>
+      <p>It wrote 400 lines of React in 30 seconds. Clean components, proper TypeScript, reasonable structure. I was impressed for about two seconds, until I opened the browser. The text didn't wrap. A headline that should have been two lines bled off the right edge of its container in a single, infinite line. The layers were stacked backwards: the background image was on top, covering everything else. And the entire composition was invisible, because every layer had its opacity set to zero.</p>
 
-      <p>I described what was wrong. The agent tried again. Still wrong — different wrong. The text now wrapped but at the wrong width. The layers were no longer inverted but the canvas wasn't clipping. I described it more carefully. Wrong a third time. Then a fourth.</p>
+      <p>I described what was wrong. The agent tried again. Still wrong. Different wrong. The text now wrapped but at the wrong width. The layers were no longer inverted but the canvas wasn't clipping. I described it more carefully. Wrong a third time. Then a fourth.</p>
 
       <p>After the tenth iteration, I realized the problem wasn't the agent.</p>
 
       <p>The problem was me.</p>
 
-      <p>I was doing what a bad manager does — giving vague verbal feedback and hoping for perfect output. "The text should wrap." "The layers are in the wrong order." "The opacity looks off." These are the engineering equivalent of "make it pop" in a design review. They're technically accurate and practically useless.</p>
+      <p>I was doing what a bad manager does: giving vague verbal feedback and hoping for perfect output. "The text should wrap." "The layers are in the wrong order." "The opacity looks off." These are the engineering equivalent of "make it pop" in a design review. They're technically accurate and practically useless.</p>
 
       <p>So I did what a good manager would do. I stopped trying to describe the problem. I built a system that makes the feedback precise, automatic, and self-correcting.</p>
 
@@ -143,7 +143,7 @@
 
       <h2>Something shifted, and I didn't have a word for it</h2>
 
-      <p>Here's what happened next. Instead of fixing the UI myself — instead of writing the CSS that makes text wrap, adjusting the z-index, correcting the opacity — I built a tool. A tool that takes the reference rendering embedded in the source design file, screenshots what the code actually renders in a headless browser, and compares the two — both visually and structurally. It returns a structured JSON report with a score, a list of issues, and an exact fix for each one.</p>
+      <p>Here's what happened next. Instead of fixing the UI myself (writing the CSS that makes text wrap, adjusting the z-index, correcting the opacity), I built a tool. A tool that takes the reference rendering embedded in the source design file, screenshots what the code actually renders in a headless browser, and compares the two, both visually and structurally. It returns a structured JSON report with a score, a list of issues, and an exact fix for each one.</p>
 
       <p>The output looks like this:</p>
 
@@ -178,7 +178,7 @@
 
       <h2>I'm calling it meta-engineering</h2>
 
-      <p>Traditional engineering means you write the code that solves the problem. Meta-engineering means you build the system that enables someone — or something — else to solve the problem repeatedly, autonomously, and correctly.</p>
+      <p>Traditional engineering means you write the code that solves the problem. Meta-engineering means you build the system that enables someone (or something) else to solve the problem repeatedly, autonomously, and correctly.</p>
 
       <p>This isn't a new concept. It's an accelerating one.</p>
 
@@ -190,11 +190,11 @@
 
       <p>I see three pillars to this kind of work.</p>
 
-      <p>The first is <strong>feedback loops</strong>. An agent can't fix what it can't see. My rendering agent had no way to compare its output against the original design. It was coding blind. The moment I gave it "eyes" — a visual diff tool that outputs a score and a heatmap — it could self-correct. Feedback loops are the eyes, ears, and nervous system of an autonomous agent.</p>
+      <p>The first is <strong>feedback loops</strong>. An agent can't fix what it can't see. My rendering agent had no way to compare its output against the original design. It was coding blind. The moment I gave it "eyes" (a visual diff tool that outputs a score and a heatmap), it could self-correct. Feedback loops are the eyes, ears, and nervous system of an autonomous agent.</p>
 
-      <p>The second is <strong>knowledge codification</strong>. Every senior developer carries around a mental catalog of "things that always go wrong." Text wraps incorrectly when the frame type is ambiguous. Layer stacking order gets inverted. Opacity values get misinterpreted across different scales. This knowledge lives in people's heads. Meta-engineering means writing it down — not as documentation, but as machine-readable detection rules paired with fix suggestions. I built a catalog of known rendering pitfalls. Each one has a detection function, an explanation, and an exact code fix. The agent doesn't need to "learn" these patterns. It just queries the catalog.</p>
+      <p>The second is <strong>knowledge codification</strong>. Every senior developer carries around a mental catalog of "things that always go wrong." Text wraps incorrectly when the frame type is ambiguous. Layer stacking order gets inverted. Opacity values get misinterpreted across different scales. This knowledge lives in people's heads. Meta-engineering means writing it down: not as documentation, but as machine-readable detection rules paired with fix suggestions. I built a catalog of known rendering pitfalls. Each one has a detection function, an explanation, and an exact code fix. The agent doesn't need to "learn" these patterns. It just queries the catalog.</p>
 
-      <p>The third is <strong>guardrails</strong>. Before the agent writes a single line, you define what "correct" looks like. Type systems. Tolerance profiles. Scoring thresholds. I defined tiers ranging from pixel-perfect to work-in-progress, each specifying acceptable similarity scores, maximum structural failures, and per-element tolerances. Text elements get looser thresholds than images because browser font rendering will never match a design tool's output exactly. These definitions exist before any code is written. They are the specification — not in a document, but in code.</p>
+      <p>The third is <strong>guardrails</strong>. Before the agent writes a single line, you define what "correct" looks like. Type systems. Tolerance profiles. Scoring thresholds. I defined tiers ranging from pixel-perfect to work-in-progress, each specifying acceptable similarity scores, maximum structural failures, and per-element tolerances. Text elements get looser thresholds than images because browser font rendering will never match a design tool's output exactly. These definitions exist before any code is written. They are the specification, not in a document, but in code.</p>
 
       <hr />
 
@@ -202,17 +202,17 @@
 
       <p>There was a specific week when I noticed the shift. I was spending more time on the evaluation tool than on the feature it was evaluating. I'd write a new detection rule in the morning, run the agent against it after lunch, and review the converged output by end of day. The feature shipped. I hadn't touched it.</p>
 
-      <p>That felt strange. I'd been a developer for years. My identity was wrapped up in writing code — in the craft of it, the flow state, the satisfaction of making something work with my own hands. And here I was, spending my days building the system that watches the system that writes the code. It felt productive. It felt high-leverage. It also felt like I was losing something.</p>
+      <p>That felt strange. I'd been a developer for years. My identity was wrapped up in writing code: the craft of it, the flow state, the satisfaction of making something work with my own hands. And here I was, spending my days building the system that watches the system that writes the code. It felt productive. It felt high-leverage. It also felt like I was losing something.</p>
 
       <p>The discomfort got sharper when I realized what the work actually resembled.</p>
 
       <hr />
 
-      <h2>Wait — this is just management</h2>
+      <h2>Wait. This is just management</h2>
 
       <p>Here's the part that made me uncomfortable.</p>
 
-      <p>What I just described — defining success criteria, building evaluation systems, providing structured feedback, letting someone else do the implementation, and trusting the loop — is not engineering.</p>
+      <p>What I just described (defining success criteria, building evaluation systems, providing structured feedback, letting someone else do the implementation, and trusting the loop) is not engineering.</p>
 
       <p>It's management.</p>
 
@@ -222,11 +222,11 @@
 
       <p>The parallels are exact. Uncomfortably exact.</p>
 
-      <p>This doesn't mean developers are becoming people managers. Nobody is scheduling one-on-ones with Claude. But the intellectual work — the core question of "how do I make sure the output is right without doing it myself" — is identical.</p>
+      <p>This doesn't mean developers are becoming people managers. Nobody is scheduling one-on-ones with Claude. But the intellectual work, the core question of "how do I make sure the output is right without doing it myself," is identical.</p>
 
       <p>There's a key difference, though, and it cuts both ways. An agent has no ego, no politics, no bad days. You never need to navigate a difficult conversation about performance. But an agent also has no judgment, no institutional memory, no ability to push back when the spec is wrong. A human teammate might say "this requirement doesn't make sense." An agent will implement the nonsensical requirement flawlessly and hand it back to you with a passing score. The meta-engineer has to carry the entire burden of deciding what's correct. You can't delegate taste.</p>
 
-      <p>The best engineering managers I've worked with understood something that took me years to learn: the highest-leverage work is rarely the most visible work. They weren't writing the code that shipped. They were building the conditions under which good code gets written. That's exactly what meta-engineering is — except the "team" runs on tokens instead of coffee.</p>
+      <p>The best engineering managers I've worked with understood something that took me years to learn: the highest-leverage work is rarely the most visible work. They weren't writing the code that shipped. They were building the conditions under which good code gets written. That's exactly what meta-engineering is, except the "team" runs on tokens instead of coffee.</p>
 
       <p>A junior developer asks: how do I build this?</p>
 
@@ -234,7 +234,7 @@
 
       <p>A meta-engineer asks: how do I build the system that ensures everything is built correctly, forever, without me?</p>
 
-      <p>That last question is what engineering directors have been asking for decades. Developers are just now arriving at it — not because they got promoted, but because their "team" can now run code.</p>
+      <p>That last question is what engineering directors have been asking for decades. Developers are just now arriving at it, not because they got promoted, but because their "team" can now run code.</p>
 
       <hr />
 
@@ -246,7 +246,7 @@
 
       <p>Three patterns have emerged in this workflow.</p>
 
-      <p><strong>Eval-driven development.</strong> Write the eval before the feature. Define what "correct" looks like as a machine-checkable assertion — not a test of implementation details, but a validation of the output's properties. Then let the agent iterate until it passes. This is TDD, but one level of abstraction higher. You're not testing functions. You're testing the system's output against a ground truth.</p>
+      <p><strong>Eval-driven development.</strong> Write the eval before the feature. Define what "correct" looks like as a machine-checkable assertion: not a test of implementation details, but a validation of the output's properties. Then let the agent iterate until it passes. This is TDD, but one level of abstraction higher. You're not testing functions. You're testing the system's output against a ground truth.</p>
 
       <p><strong>Knowledge bases as code.</strong> Stop writing comments that explain what goes wrong. Start writing detection rules that catch what goes wrong. "When a text element's frame type is ambiguous, the rendering will fail to wrap. Detection: text content wider than bounding box by more than 15%. Fix: default to constrained wrapping when the frame type is not explicitly set." This is not documentation. It is an executable rule that agents consume directly, with no human interpretation required.</p>
 
@@ -256,15 +256,15 @@
 
       <h2>The question I keep coming back to</h2>
 
-      <p>I used to measure my productivity in lines of code written. Now I measure it in agent iterations eliminated. The best day I had last month, I wrote zero product code and deployed three features — because I had already built the systems that let the agents ship them correctly.</p>
+      <p>I used to measure my productivity in lines of code written. Now I measure it in agent iterations eliminated. The best day I had last month, I wrote zero product code and deployed three features, because I had already built the systems that let the agents ship them correctly.</p>
 
-      <p>That sentence would have horrified me three years ago. Writing code was the job. It was the craft. It was the thing I was good at, the thing I could point to and say: I made this. When the highest-leverage move is to not write code — to instead design the system that ensures code correctness — something shifts in your professional identity. You're still an engineer. But the engineering looks different. It looks like defining. Like evaluating. Like managing.</p>
+      <p>That sentence would have horrified me three years ago. Writing code was the job. It was the craft. It was the thing I was good at, the thing I could point to and say: I made this. When the highest-leverage move is to not write code, to instead design the system that ensures code correctness, something shifts in your professional identity. You're still an engineer. But the engineering looks different. It looks like defining. Like evaluating. Like managing.</p>
 
-      <p>This has implications beyond individual identity. If the most valuable engineering skill is no longer implementation but system design for autonomous agents, then how we hire engineers needs to change. The interview question shifts from "can you write a binary search?" to "can you design an evaluation harness that catches when a binary search is wrong?" How we evaluate performance changes too. Lines of code, PRs merged, tickets closed — these metrics were already imperfect. In a world where agents write the code, they become meaningless. What matters is: did the systems you built make the agents more correct, more autonomous, more reliable?</p>
+      <p>This has implications beyond individual identity. If the most valuable engineering skill is no longer implementation but system design for autonomous agents, then how we hire engineers needs to change. The interview question shifts from "can you write a binary search?" to "can you design an evaluation harness that catches when a binary search is wrong?" How we evaluate performance changes too. Lines of code, PRs merged, tickets closed; these metrics were already imperfect. In a world where agents write the code, they become meaningless. What matters is: did the systems you built make the agents more correct, more autonomous, more reliable?</p>
 
-      <p>The role I'm describing — designing feedback loops, codifying quality, building the tools that build the product — doesn't have a job title yet. "Meta-engineer" is my attempt. You might call it something else.</p>
+      <p>The role I'm describing (designing feedback loops, codifying quality, building the tools that build the product) doesn't have a job title yet. "Meta-engineer" is my attempt. You might call it something else.</p>
 
-      <p>But here's the question I keep coming back to: if the highest-leverage thing a developer can do is no longer writing code, but designing the systems that make code correct — then what exactly separates us from the best engineering managers we've ever worked with?</p>
+      <p>But here's the question I keep coming back to: if the highest-leverage thing a developer can do is no longer writing code, but designing the systems that make code correct, then what exactly separates us from the best engineering managers we've ever worked with?</p>
 
       <p>Maybe nothing.</p>
 

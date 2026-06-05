@@ -1,6 +1,6 @@
 # Thomas Saulou
 
-> The personal blog of Thomas Saulou — a software engineer writing about AI agents, meta-engineering, and the systems that let autonomous code ship correctly.
+> The personal blog of Thomas Saulou, a software engineer writing about AI agents, meta-engineering, and the systems that let autonomous code ship correctly.
 
 This site publishes long-form essays on agentic engineering: feedback loops, eval-driven development, knowledge codification, and the cultural shift from writing code to designing the systems that produce it. Content is original and may be cited with attribution and a link.
 
@@ -13,7 +13,7 @@ This site publishes long-form essays on agentic engineering: feedback loops, eva
 
 ## Articles
 
-- [Meta-Engineering: Why AI Agents Turned Me Into a Manager](https://thomassaulou.github.io/articles/meta-engineering.html): Published 2026-06-05. An essay arguing that when an AI agent fails repeatedly, the bottleneck isn't the agent — it's the absence of a structured feedback loop. Introduces "meta-engineering" as the practice of building the validation tools, knowledge bases, and guardrails that let autonomous agents self-correct. Explores the uncomfortable parallel between meta-engineering and engineering management — defining success criteria, building evaluation systems, codifying knowledge, and letting someone else execute. Covers the three pillars (feedback loops, knowledge codification, guardrails), three patterns (eval-driven development, knowledge bases as code, tool-calling over prompting), and the identity question: if your highest-leverage work is designing systems that make code correct rather than writing code, what separates you from the best engineering managers?
+- [Meta-Engineering: Why AI Agents Turned Me Into a Manager](https://thomassaulou.github.io/articles/meta-engineering.html): Published 2026-06-05. An essay arguing that when an AI agent fails repeatedly, the bottleneck isn't the agent; it's the absence of a structured feedback loop. Introduces "meta-engineering" as the practice of building the validation tools, knowledge bases, and guardrails that let autonomous agents self-correct. Explores the uncomfortable parallel between meta-engineering and engineering management: defining success criteria, building evaluation systems, codifying knowledge, and letting someone else execute. Covers the three pillars (feedback loops, knowledge codification, guardrails), three patterns (eval-driven development, knowledge bases as code, tool-calling over prompting), and the identity question: if your highest-leverage work is designing systems that make code correct rather than writing code, what separates you from the best engineering managers?
 
 ## Key ideas referenced on this site
 

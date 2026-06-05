@@ -13,7 +13,7 @@
       <guid isPermaLink="true">https://thomassaulou.github.io/articles/meta-engineering.html</guid>
       <pubDate>Fri, 05 Jun 2026 00:00:00 GMT</pubDate>
       <author>Thomas Saulou</author>
-      <description>When an AI agent fails ten times in a row, the problem isn't the agent — it's the feedback loop. An essay on meta-engineering: building the systems that let autonomous agents ship correct code.</description>
+      <description>When an AI agent fails ten times in a row, the problem isn't the agent; it's the feedback loop. An essay on meta-engineering: building the systems that let autonomous agents ship correct code.</description>
     </item>
   </channel>
 </rss>
