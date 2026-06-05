@@ -1,0 +1,100 @@
+:root {
+  --color-surface: oklch(98% 0.01 250);
+  --color-text: oklch(22% 0.02 250);
+  --color-muted: oklch(55% 0.02 250);
+  --color-accent: oklch(62% 0.19 255);
+
+  --text-lede: clamp(1.05rem, 0.95rem + 0.5vw, 1.35rem);
+  --text-hero: clamp(2.75rem, 1rem + 7vw, 6rem);
+
+  --space-block: clamp(1rem, 0.5rem + 2vw, 2rem);
+
+  --duration-normal: 300ms;
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: var(--color-text);
+  background:
+    radial-gradient( at 80% 0%, oklch(92% 0.06 255 / 0.7), transparent 55%),
+    radial-gradient(at 0% 100%, oklch(92% 0.05 320 / 0.6), transparent 50%),
+    var(--color-surface);
+}
+
+.hero {
+  flex: 1;
+  display: grid;
+  place-items: center;
+  padding: var(--space-block);
+}
+
+.hero section {
+  max-width: 42rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+h1 {
+  margin: 0 0 1rem;
+  font-size: var(--text-hero);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+}
+
+.lede {
+  margin: 0 0 2rem;
+  font-size: var(--text-lede);
+  line-height: 1.5;
+  color: var(--color-muted);
+}
+
+.cta {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  background: var(--color-accent);
+  color: oklch(99% 0 0);
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform var(--duration-normal) var(--ease-out-expo),
+    filter var(--duration-normal) var(--ease-out-expo);
+}
+
+.cta:hover,
+.cta:focus-visible {
+  transform: translateY(-2px);
+  filter: brightness(1.08);
+}
+
+footer {
+  padding: var(--space-block);
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cta {
+    transition: none;
+  }
+}
