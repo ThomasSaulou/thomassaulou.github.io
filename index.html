@@ -3,23 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Thomas Saulou — Blog</title>
-  <meta name="description" content="The personal blog of Thomas Saulou." />
+  <title>Thomas Saulou</title>
+  <meta name="description" content="Writing on engineering, AI agents, and building systems — by Thomas Saulou." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <main class="hero">
-    <section aria-labelledby="hero-heading">
-      <p class="eyebrow">Personal blog</p>
-      <h1 id="hero-heading">Hello, world.</h1>
-      <p class="lede">
-        This is the start of something. Writing, notes, and experiments by
-        <strong>Thomas Saulou</strong>.
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="/">Thomas<span>.</span></a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="https://github.com/ThomasSaulou">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="feed">
+    <p class="feed__lede">
+      Notes on engineering, AI agents, and the systems we build to make
+      machines do the work.
+    </p>
+
+    <a class="post-card" href="articles/meta-engineering.html">
+      <p class="post-card__meta">Jun 5, 2026 · 9 min read</p>
+      <h2 class="post-card__title">Meta-Engineering: Why AI Agents Turned Me Into a Manager</h2>
+      <p class="post-card__excerpt">
+        I asked an AI agent to render a Photoshop file in a browser. It wrote
+        400 lines of React in 30 seconds — and got it wrong ten times. After
+        the tenth iteration, I realized the problem wasn't the agent.
       </p>
-      <a class="cta" href="https://github.com/ThomasSaulou/thomassaulou.github.io">View the source</a>
-    </section>
+    </a>
   </main>
-  <footer>
+
+  <footer class="site-footer">
     <p>&copy; <span id="year"></span> Thomas Saulou</p>
   </footer>
   <script src="main.js"></script>
