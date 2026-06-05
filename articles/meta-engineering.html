@@ -3,17 +3,106 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary SEO -->
   <title>Meta-Engineering: Why AI Agents Turned Me Into a Manager — Thomas Saulou</title>
-  <meta name="description" content="I asked an AI agent to render a Photoshop file in a browser. After the tenth wrong iteration, I realized the problem wasn't the agent — it was me." />
+  <meta name="description" content="When an AI agent fails ten times in a row, the problem isn't the agent — it's the feedback loop. An essay on meta-engineering: building the systems that let autonomous agents ship correct code." />
+  <meta name="author" content="Thomas Saulou" />
+  <meta name="keywords" content="meta-engineering, AI agents, agentic engineering, eval-driven development, autonomous agents, feedback loops, LLM tooling, PSD rendering, software engineering management" />
+  <link rel="canonical" href="https://thomassaulou.github.io/articles/meta-engineering.html" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta name="article:published_time" content="2026-06-05T00:00:00Z" />
+  <meta name="article:author" content="Thomas Saulou" />
+
+  <!-- Open Graph (article) -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Thomas Saulou" />
+  <meta property="og:title" content="Meta-Engineering: Why AI Agents Turned Me Into a Manager" />
+  <meta property="og:description" content="When an AI agent fails ten times, the problem isn't the agent — it's the feedback loop. An essay on building the systems that let autonomous agents ship correct code." />
+  <meta property="og:url" content="https://thomassaulou.github.io/articles/meta-engineering.html" />
+  <meta property="og:image" content="https://thomassaulou.github.io/og-image.svg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="article:published_time" content="2026-06-05T00:00:00Z" />
+  <meta property="article:author" content="https://thomassaulou.github.io/" />
+  <meta property="article:section" content="Engineering" />
+  <meta property="article:tag" content="AI agents" />
+  <meta property="article:tag" content="Meta-engineering" />
+  <meta property="article:tag" content="Eval-driven development" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Meta-Engineering: Why AI Agents Turned Me Into a Manager" />
+  <meta name="twitter:description" content="When an AI agent fails ten times, the problem isn't the agent — it's the feedback loop." />
+  <meta name="twitter:image" content="https://thomassaulou.github.io/og-image.svg" />
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+  <link rel="alternate" type="application/rss+xml" title="Thomas Saulou — RSS" href="/feed.xml" />
+
   <link rel="stylesheet" href="../styles.css" />
+
+  <!-- Structured data: BlogPosting + BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "@id": "https://thomassaulou.github.io/articles/meta-engineering.html#article",
+        "headline": "Meta-Engineering: Why AI Agents Turned Me Into a Manager",
+        "alternativeHeadline": "Why building feedback loops for AI agents is the new high-leverage engineering",
+        "description": "When an AI agent fails ten times, the problem isn't the agent — it's the feedback loop. An essay on building the systems that let autonomous agents ship correct code.",
+        "url": "https://thomassaulou.github.io/articles/meta-engineering.html",
+        "datePublished": "2026-06-05",
+        "dateModified": "2026-06-05",
+        "inLanguage": "en-US",
+        "wordCount": 1800,
+        "articleSection": "Engineering",
+        "keywords": "meta-engineering, AI agents, eval-driven development, feedback loops, autonomous agents, LLM tooling",
+        "author": {
+          "@type": "Person",
+          "@id": "https://thomassaulou.github.io/#person",
+          "name": "Thomas Saulou",
+          "url": "https://thomassaulou.github.io/"
+        },
+        "publisher": {
+          "@type": "Person",
+          "@id": "https://thomassaulou.github.io/#person",
+          "name": "Thomas Saulou"
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://thomassaulou.github.io/articles/meta-engineering.html"
+        },
+        "image": "https://thomassaulou.github.io/og-image.svg",
+        "about": [
+          { "@type": "Thing", "name": "AI agents" },
+          { "@type": "Thing", "name": "Meta-engineering" },
+          { "@type": "Thing", "name": "Eval-driven development" },
+          { "@type": "Thing", "name": "Autonomous software systems" }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://thomassaulou.github.io/" },
+          { "@type": "ListItem", "position": 2, "name": "Articles", "item": "https://thomassaulou.github.io/" },
+          { "@type": "ListItem", "position": 3, "name": "Meta-Engineering", "item": "https://thomassaulou.github.io/articles/meta-engineering.html" }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <header class="site-header">
     <div class="site-header__inner">
-      <a class="brand" href="../index.html">Thomas<span>.</span></a>
+      <a class="brand" href="/" aria-label="Thomas Saulou — Home">Thomas<span>.</span></a>
       <nav class="site-nav" aria-label="Main navigation">
-        <a href="../index.html">Home</a>
-        <a href="https://github.com/ThomasSaulou">GitHub</a>
+        <a href="/">Home</a>
+        <a href="/about.html">About</a>
       </nav>
     </div>
   </header>

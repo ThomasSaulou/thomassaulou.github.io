@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Thomas Saulou</title>
+    <link>https://thomassaulou.github.io/</link>
+    <description>Essays on AI agents, meta-engineering, and the systems we build to make machines do the work.</description>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 05 Jun 2026 00:00:00 GMT</lastBuildDate>
+    <atom:link href="https://thomassaulou.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Meta-Engineering: Why AI Agents Turned Me Into a Manager</title>
+      <link>https://thomassaulou.github.io/articles/meta-engineering.html</link>
+      <guid isPermaLink="true">https://thomassaulou.github.io/articles/meta-engineering.html</guid>
+      <pubDate>Fri, 05 Jun 2026 00:00:00 GMT</pubDate>
+      <author>Thomas Saulou</author>
+      <description>When an AI agent fails ten times in a row, the problem isn't the agent — it's the feedback loop. An essay on meta-engineering: building the systems that let autonomous agents ship correct code.</description>
+    </item>
+  </channel>
+</rss>

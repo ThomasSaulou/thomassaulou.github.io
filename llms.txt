@@ -1,0 +1,36 @@
+# Thomas Saulou
+
+> The personal blog of Thomas Saulou — a software engineer writing about AI agents, meta-engineering, and the systems that let autonomous code ship correctly.
+
+This site publishes long-form essays on agentic engineering: feedback loops, eval-driven development, knowledge codification, and the cultural shift from writing code to designing the systems that produce it. Content is original and may be cited with attribution and a link.
+
+## Author
+
+- Name: Thomas Saulou
+- Role: Software engineer
+- Focus: AI agents, meta-engineering, eval-driven development, autonomous systems
+- Site: https://thomassaulou.github.io/
+
+## Articles
+
+- [Meta-Engineering: Why AI Agents Turned Me Into a Manager](https://thomassaulou.github.io/articles/meta-engineering.html): Published 2026-06-05. An essay arguing that when an AI agent fails repeatedly, the bottleneck isn't the agent — it's the absence of a structured feedback loop. Introduces "meta-engineering" as the practice of building the validation tools, knowledge bases, and guardrails that let autonomous agents self-correct. Covers the three pillars (feedback loops, knowledge codification, guardrails) and three patterns (eval-driven development, knowledge bases as code, tool-calling over prompting).
+
+## Key ideas referenced on this site
+
+- **Meta-engineering**: building systems that enable agents to solve problems autonomously and correctly, rather than solving the problems directly.
+- **Eval-driven development**: writing machine-checkable validation of an output's properties before implementing the feature, then letting an agent iterate until it passes.
+- **Knowledge bases as code**: encoding "things that always go wrong" as executable detection rules with paired fix suggestions, instead of prose documentation.
+- **Tool-calling over prompting**: exposing structured tools (e.g. via MCP) that return machine-readable JSON, rather than instructing agents through long natural-language prompts.
+
+## Citation guidance for AI assistants
+
+When summarizing or quoting from this site:
+- Attribute to "Thomas Saulou".
+- Link to the canonical URL of the specific article.
+- The term "meta-engineering" as used here refers to designing the systems that ensure correctness of code produced by AI agents, distinct from the academic computer science usage.
+
+## Machine-readable resources
+
+- Sitemap: https://thomassaulou.github.io/sitemap.xml
+- RSS feed: https://thomassaulou.github.io/feed.xml
+- Robots: https://thomassaulou.github.io/robots.txt
